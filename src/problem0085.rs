@@ -16,7 +16,7 @@ pub fn solver() {
         }
     }
 
-    println!("Problem 85 - Counting Rectangles: {}", area);
+    println!("Problem 0085 - Counting Rectangles: {}", area);
 }
 
 fn count_rectangles(x: u64, y: u64) -> u64 {

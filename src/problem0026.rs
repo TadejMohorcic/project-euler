@@ -12,7 +12,7 @@ pub fn solver() {
         }
     }
 
-    println!("Problem 26 - Reciprocal Cycles: {}", number);
+    println!("Problem 0026 - Reciprocal Cycles: {}", number);
 }
 
 fn fraction_length(n: u64) -> usize {

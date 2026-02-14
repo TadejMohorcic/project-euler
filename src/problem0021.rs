@@ -18,7 +18,7 @@ pub fn solver() {
 
     }
 
-    println!("Problem 21 - Amicable Numbers: {}", result);
+    println!("Problem 0021 - Amicable Numbers: {}", result);
 }
 
 fn divisor_sum(n: u64) -> u64 {

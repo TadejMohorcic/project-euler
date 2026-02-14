@@ -21,7 +21,7 @@ pub fn solver() {
         }
     }
 
-    println!("Problem 27 - Quadratic Primes: {}", product);
+    println!("Problem 0027 - Quadratic Primes: {}", product);
 }
 
 fn is_prime(n: i64) -> bool {

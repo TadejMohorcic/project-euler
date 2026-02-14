@@ -9,7 +9,7 @@ pub fn solver() {
         }
     }
 
-    println!("Problem 36 - Double-base Palindromes: {}", result)
+    println!("Problem 0036 - Double-base Palindromes: {}", result)
 }
 
 fn base2_palindrome(number: u32) -> bool {

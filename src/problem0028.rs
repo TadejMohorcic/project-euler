@@ -1,6 +1,6 @@
 pub fn solver() {
     let result = sum_of_diagonals(1001);
-    println!("Problem 28 - Number Spiral Diagonals: {}", result)
+    println!("Problem 0028 - Number Spiral Diagonals: {}", result)
 }
 
 fn sum_of_diagonals(mut size: u64) -> u64 {

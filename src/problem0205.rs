@@ -1,7 +1,7 @@
 pub fn solver() {
     let result = dice_probability(9, 6);
     
-    println!("Problem 206 solution: {}", result)
+    println!("Problem 0205 - Dice Game: {}", result)
 }
 
 fn dice_probability(four_sided_throws: usize, six_sided_throws: usize) -> f64 {

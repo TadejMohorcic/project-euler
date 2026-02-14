@@ -10,7 +10,7 @@ pub fn solver() {
         }
     }
 
-    println!("Problem 30 - Digit Fifth Powers: {}", result);
+    println!("Problem 0030 - Digit Fifth Powers: {}", result);
 }
 
 fn get_digits(number: u64) -> Vec<u64> {

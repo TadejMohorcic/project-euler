@@ -47,7 +47,7 @@ pub fn solver() {
 
     let q = gcd(numerator, denominator);
 
-    println!("Problem 33 - Digit Cancelling Fractions: {}", denominator / q);
+    println!("Problem 0033 - Digit Cancelling Fractions: {}", denominator / q);
 }
 
 fn get_digits(n: u64) -> [u64; 2] {

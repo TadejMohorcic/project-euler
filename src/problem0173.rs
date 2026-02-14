@@ -1,6 +1,6 @@
 pub fn solver() {
     let result = odd_even_pairs(1000000.0);
-    println!("Problem 173 solution: {}", result);
+    println!("Problem 0173 - Hollow Square Laminae I: {}", result);
 }
 
 fn odd_even_pairs(upper_limit: f64) -> u64 {

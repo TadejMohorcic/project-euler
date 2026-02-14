@@ -1,6 +1,6 @@
 pub fn solver() {
     let result = combinations(50);
-    println!("Problem 117 - Red, Green, and Blue Tiles: {}", result);
+    println!("Problem 0117 - Red, Green, and Blue Tiles: {}", result);
 }
 
 fn combinations(n: usize) -> u64 {

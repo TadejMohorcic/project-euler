@@ -41,7 +41,7 @@ fn calculate_product(grid: &Vec<Vec<u64>>) -> u64 {
 }
 
 pub fn solver() -> io::Result<()> {
-    let path = "input/11.txt";
+    let path = "input/0011.txt";
     let file = File::open(path)?;
     let reader = BufReader::new(file);
 
@@ -59,7 +59,7 @@ pub fn solver() -> io::Result<()> {
     }
 
     let result = calculate_product(&grid);
-    println!("Problem 11 - Largest Product in a Grid: {}", result);
+    println!("Problem 0011 - Largest Product in a Grid: {}", result);
 
     Ok(())
 }

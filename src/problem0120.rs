@@ -5,7 +5,7 @@ pub fn solver() {
         result += calculate_remainder(i);
     }
 
-    println!("Problem 120 solution: {}", result)
+    println!("Problem 0120 - Square Remainders: {}", result)
 }
 
 fn calculate_remainder(num: u64) -> u64 {

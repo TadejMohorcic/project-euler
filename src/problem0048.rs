@@ -6,7 +6,7 @@ pub fn solver() {
         result = (result + r) % 10000000000.0;
     }
 
-    println!("Problem 48 - Self Powers: {}", result)
+    println!("Problem 0048 - Self Powers: {}", result)
 }
 
 fn exponent_modulo(n: f64, pow: i64, modulo: f64) -> f64 {

@@ -27,5 +27,5 @@ pub fn solver() {
     }
 
     let prob = memo[&(max_red, max_black)];
-    println!("Problem 938 - Exhausting a Colour: {}", prob);
+    println!("Problem 0938 - Exhausting a Colour: {}", prob);
 }

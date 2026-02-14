@@ -2,7 +2,7 @@ pub fn solver() {
     let coins: [usize; 8] = [1, 2, 5, 10, 20, 50, 100, 200];
     let solution = coin_sums(200, coins);
 
-    println!("Problem 31 - Coin Sums: {}", solution)
+    println!("Problem 0031 - Coin Sums: {}", solution)
 }
 
 fn coin_sums(total: usize, coins: [usize; 8]) -> u64 {

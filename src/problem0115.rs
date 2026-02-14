@@ -1,7 +1,7 @@
 pub fn solver() {
     let max_size = 1_000_000;
     let result = combinations(50, max_size);
-    println!("Problem 115 - Counting Block Combinations II: {}", result);
+    println!("Problem 0115 - Counting Block Combinations II: {}", result);
 }
 
 fn combinations(m: usize, max_size: u64) -> usize {

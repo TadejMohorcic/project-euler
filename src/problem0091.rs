@@ -10,7 +10,7 @@ pub fn solver() {
         }
     }
 
-    println!("Problem 91 solution: {}", solutions);
+    println!("Problem 0091 - Right Triangles with Integer Coordinates: {}", solutions);
 }
 
 fn integer_solutions(a: i64, b: i64, max_size: i64) -> i64 {

@@ -16,7 +16,7 @@ pub fn solver() -> io::Result<()> {
         }
     }
     
-    println!("Problem 54 - Poker Hands: {}", result);
+    println!("Problem 0054 - Poker Hands: {}", result);
 
     Ok(())
 }

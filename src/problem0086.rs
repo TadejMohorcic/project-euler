@@ -16,7 +16,7 @@ pub fn solver() {
             }
         }
         if result as f64 > 1e6 {
-            println!("Problem 86 - Cuboid Route: {}", i);
+            println!("Problem 0086 - Cuboid Route: {}", i);
             break
         }
     }

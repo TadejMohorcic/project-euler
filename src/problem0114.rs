@@ -2,7 +2,7 @@ use std::cmp::{min, max};
 
 pub fn solver() {
     let a = count_block_combos(50);
-    println!("Problem 114 - Counting Block Combinations I: {}", a);
+    println!("Problem 0114 - Counting Block Combinations I: {}", a);
 }
 
 pub fn count_block_combos(n: usize) -> u64 {

@@ -1,6 +1,6 @@
 pub fn solver() {
     let result = get_ith_permutation(999999, 9);
-    println!("Problem 24 - Lexicographic Permutations: {}", result);
+    println!("Problem 0024 - Lexicographic Permutations: {}", result);
 }
 
 fn factorial(n: usize) -> u64 {

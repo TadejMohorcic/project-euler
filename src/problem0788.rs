@@ -9,7 +9,7 @@ pub fn solver() {
         }
     }
 
-    println!("Problem 788 - Dominating Numbers: {}", total);
+    println!("Problem 0788 - Dominating Numbers: {}", total);
 }
 
 fn modular_exponent(base: u64, exponent: u64, modulo: u64) -> u64 {

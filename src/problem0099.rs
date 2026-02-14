@@ -27,7 +27,7 @@ pub fn solver() -> io::Result<()> {
         current_row += 1;
     }
 
-    println!("Problem 99 solution: {}", row_highest);
+    println!("Problem 0099 solution: {}", row_highest);
 
     Ok(())
 }

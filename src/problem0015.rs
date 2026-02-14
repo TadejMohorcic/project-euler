@@ -2,7 +2,7 @@ use std::collections::HashMap;
 
 pub fn solver() {
     let result = caluculate_rounts(20);
-    println!("Problem 15 - Lattice Paths: {}", result);
+    println!("Problem 0015 - Lattice Paths: {}", result);
 }
 
 fn caluculate_rounts(n: usize) -> u64 {

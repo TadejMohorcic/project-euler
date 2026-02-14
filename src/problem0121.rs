@@ -2,7 +2,7 @@ pub fn solver() {
     let (c, d) = dics_probability(15);
     let result = d / c;
     
-    println!("Problem 121 - Disc Game Prize Fund: {}", result);
+    println!("Problem 0121 - Disc Game Prize Fund: {}", result);
 }
 
 fn dics_probability(n: u64) -> (u64, u64) {

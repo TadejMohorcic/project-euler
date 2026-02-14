@@ -6,7 +6,7 @@ use std::collections::VecDeque;
 pub fn solver() {
     let top_three = play_monopoly(4, 1000000);
     let result = 100 * (100 * top_three[0] + top_three[1]) + top_three[2];
-    println!("Problem 84 - Monopoly Odds: {}", result);
+    println!("Problem 0084 - Monopoly Odds: {}", result);
 }
 
 fn throw_dice(n: usize) -> (usize, bool) {

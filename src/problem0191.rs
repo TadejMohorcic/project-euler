@@ -1,6 +1,6 @@
 pub fn solver() {
     let result = number_of_valid_sequences(30);
-    println!("Problem 191 - Prize Strings: {}", result);
+    println!("Problem 0191 - Prize Strings: {}", result);
 }
 
 fn number_of_valid_sequences(n: usize) -> u32 {

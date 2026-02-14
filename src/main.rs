@@ -1,0 +1,65 @@
+#![allow(unused)]
+
+mod problem11;
+mod problem12;
+mod problem15;
+mod problem21;
+mod problem24;
+mod problem26;
+mod problem27;
+mod problem28;
+mod problem30;
+mod problem31;
+mod problem33;
+mod problem36;
+mod problem48;
+mod problem54;
+mod problem84;
+mod problem85;
+mod problem86;
+mod problem91;
+mod problem99;
+mod problem114;
+mod problem115;
+mod problem116;
+mod problem117;
+mod problem120;
+mod problem121;
+mod problem173;
+mod problem191;
+mod problem206;
+mod problem788;
+mod problem938;
+
+fn main() {
+    // problem11::solver();
+    // problem12::solver();
+    // problem15::solver();
+    // problem21::solver();
+    // problem24::solver();
+    // problem26::solver();
+    // problem27::solver();
+    // problem28::solver();
+    // problem30::solver();
+    // problem31::solver();
+    // problem33::solver();
+    // problem36::solver();
+    // problem48::solver();
+    // problem54::solver();
+    // problem84::solver();
+    // problem85::solver();
+    // problem86::solver();
+    // problem91::solver();
+    // problem99::solver();
+    problem114::solver();
+    problem115::solver();
+    problem116::solver();
+    problem117::solver();
+    // problem120::solver();
+    // problem121::solver();
+    // problem173::solver();
+    // problem191::solver();
+    // problem206::solver();
+    // problem788::solver();
+    // problem938::solver();
+}

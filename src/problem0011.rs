@@ -3,43 +3,6 @@ use std::io::{self, BufRead, BufReader};
 
 use std::cmp::max;
 
-fn calculate_product(grid: &Vec<Vec<u64>>) -> u64 {
-    let mut product: u64 = 0;
-    let m = grid.len();
-    let n = grid[0].len();
-
-    for i in 0..m {
-        for j in 0..n {
-            let current = grid[i][j];
-
-            let mut prod_r: u64 = 0;
-            let mut prod_rd: u64 = 0;
-            let mut prod_d: u64 = 0;
-            let mut prod_ld: u64 = 0;
-
-            if j < n-4 {
-                prod_r = current * grid[i][j+1] * grid[i][j+2] * grid[i][j+3];
-            }
-
-            if i < m-3 {
-                prod_d = current * grid[i+1][j] * grid[i+2][j] * grid[i+3][j];
-
-                if j < n-4 {
-                    prod_rd = current * grid[i+1][j+1] * grid[i+2][j+2] * grid[i+3][j+3];
-                }
-
-                if j > 2 {
-                    prod_ld = current * grid[i+1][j-1] * grid[i+2][j-2] * grid[i+3][j-3];
-                }
-            }
-
-            product = max(product, max(prod_r, max(prod_d, max(prod_rd, prod_ld))));
-        }
-    }
-
-    product
-}
-
 pub fn solver() -> io::Result<()> {
     let path = "input/0011.txt";
     let file = File::open(path)?;
@@ -62,4 +25,43 @@ pub fn solver() -> io::Result<()> {
     println!("Problem 0011 - Largest Product in a Grid: {}", result);
 
     Ok(())
+}
+
+fn calculate_product(grid: &Vec<Vec<u64>>) -> u64 {
+    let mut product: u64 = 0;
+    let m = grid.len();
+    let n = grid[0].len();
+
+    for i in 0..m {
+        for j in 0..n {
+            let current = grid[i][j];
+
+            let mut prod_r: u64 = 0;
+            let mut prod_rd: u64 = 0;
+            let mut prod_d: u64 = 0;
+            let mut prod_ld: u64 = 0;
+
+            if j < n - 4 {
+                prod_r = current * grid[i][j + 1] * grid[i][j + 2] * grid[i][j + 3];
+            }
+
+            if i < m - 3 {
+                prod_d = current * grid[i + 1][j] * grid[i + 2][j] * grid[i + 3][j];
+
+                if j < n - 4 {
+                    prod_rd =
+                        current * grid[i + 1][j + 1] * grid[i + 2][j + 2] * grid[i + 3][j + 3];
+                }
+
+                if j > 2 {
+                    prod_ld =
+                        current * grid[i + 1][j - 1] * grid[i + 2][j - 2] * grid[i + 3][j - 3];
+                }
+            }
+
+            product = max(product, max(prod_r, max(prod_d, max(prod_rd, prod_ld))));
+        }
+    }
+
+    product
 }

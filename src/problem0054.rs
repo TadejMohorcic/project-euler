@@ -6,7 +6,7 @@ use std::io::{self, BufRead, BufReader};
 pub fn solver() -> io::Result<()> {
     let input = File::open("input/54.txt")?;
     let reader = BufReader::new(input);
-    
+
     let mut result = 0;
 
     for line in reader.lines() {
@@ -15,7 +15,7 @@ pub fn solver() -> io::Result<()> {
             result += 1;
         }
     }
-    
+
     println!("Problem 0054 - Poker Hands: {}", result);
 
     Ok(())
@@ -24,7 +24,7 @@ pub fn solver() -> io::Result<()> {
 #[derive(Debug, Clone)]
 struct Card {
     value: u32,
-    suit: char
+    suit: char,
 }
 
 fn compare_hands(hand: &str) -> bool {
@@ -72,7 +72,7 @@ fn score_hand(played_hand: &Vec<Card>) -> (u32, Vec<u32>) {
         (_, _, [(3, _), ..]) => 4,
         (_, _, [(2, _), (2, _), ..]) => 3,
         (_, _, [(2, _), ..]) => 2,
-        _ => 1
+        _ => 1,
     };
 
     let mut tiebreak = Vec::new();
@@ -86,21 +86,26 @@ fn score_hand(played_hand: &Vec<Card>) -> (u32, Vec<u32>) {
 }
 
 fn split_hand(hand: &str) -> (Vec<Card>, Vec<Card>) {
-    let cards: Vec<Card> = hand.split_whitespace().map(|c| {
-        let mut chars = c.chars();
-        let value = match chars.next().unwrap() {
-            '2'..='9' => c.chars().next().unwrap().to_digit(10).unwrap(),
-            'T' => 10,
-            'J' => 11,
-            'Q' => 12,
-            'K' => 13,
-            'A' => 14,
-            _ => unreachable!("Invalid card value!")
-        };
-        let suit = c.chars().next().unwrap();
-        Card {value: value, suit: suit}
-    }).collect();
+    let cards: Vec<Card> = hand
+        .split_whitespace()
+        .map(|c| {
+            let mut chars = c.chars();
+            let value = match chars.next().unwrap() {
+                '2'..='9' => c.chars().next().unwrap().to_digit(10).unwrap(),
+                'T' => 10,
+                'J' => 11,
+                'Q' => 12,
+                'K' => 13,
+                'A' => 14,
+                _ => unreachable!("Invalid card value!"),
+            };
+            let suit = c.chars().next().unwrap();
+            Card {
+                value: value,
+                suit: suit,
+            }
+        })
+        .collect();
 
     (cards[..5].to_vec(), cards[5..].to_vec())
 }
- 

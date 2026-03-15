@@ -23,8 +23,7 @@ fn fraction_length(n: u64) -> usize {
     while remainder != 0 {
         if remainders.contains(&remainder) {
             break;
-        }
-        else {
+        } else {
             remainders.insert(remainder);
         }
 

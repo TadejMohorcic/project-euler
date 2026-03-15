@@ -29,6 +29,6 @@ fn get_ith_permutation(mut i: u64, number_of_digits: usize) -> u64 {
             digits.remove(index);
         }
     }
-    
+
     result
 }

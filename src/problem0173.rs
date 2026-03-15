@@ -19,12 +19,11 @@ fn odd_even_pairs(upper_limit: f64) -> u64 {
 
         if start_int % 2 == 1 {
             start_int += 1;
-            
+
             if end_int % 2 == 1 {
                 end_int += 1;
             }
-        }
-        else {
+        } else {
             if end_int % 2 == 1 {
                 end_int -= 1;
             }

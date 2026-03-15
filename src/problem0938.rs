@@ -20,7 +20,9 @@ pub fn solver() {
             let factor_r = (red * (red - 1)) as f64 / (total * (total - 1.0));
             let factor_b = (2 * red * black) as f64 / (total * (total - 1.0));
 
-            let probability = (factor_r * memo[&(red - 2, black)] + factor_b * memo[&(red, black - 1)]) / factor_rb;
+            let probability = (factor_r * memo[&(red - 2, black)]
+                + factor_b * memo[&(red, black - 1)])
+                / factor_rb;
 
             memo.insert((red, black), probability);
         }

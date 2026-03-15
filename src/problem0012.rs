@@ -7,7 +7,10 @@ pub fn solver() {
         triangular_number += i;
         let divisors = get_divisors(triangular_number);
         if divisors > target {
-            println!("Problem 0012 - Highly Divisible Triangular Number: {}", triangular_number);
+            println!(
+                "Problem 0012 - Highly Divisible Triangular Number: {}",
+                triangular_number
+            );
             break;
         }
         i += 1;

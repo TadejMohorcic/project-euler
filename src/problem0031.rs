@@ -6,12 +6,12 @@ pub fn solver() {
 }
 
 fn coin_sums(total: usize, coins: [usize; 8]) -> u64 {
-    let mut solutions: Vec<u64> = vec![0; total+1];
+    let mut solutions: Vec<u64> = vec![0; total + 1];
     solutions[0] = 1;
 
     for coin in coins {
-        for i in coin..total+1 {
-            solutions[i] += solutions[i-coin];
+        for i in coin..total + 1 {
+            solutions[i] += solutions[i - coin];
         }
     }
 

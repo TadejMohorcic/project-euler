@@ -10,14 +10,17 @@ pub fn solver() {
         }
     }
 
-    println!("Problem 0091 - Right Triangles with Integer Coordinates: {}", solutions);
+    println!(
+        "Problem 0091 - Right Triangles with Integer Coordinates: {}",
+        solutions
+    );
 }
 
 fn integer_solutions(a: i64, b: i64, max_size: i64) -> i64 {
     let mut num_of_solutions = 0;
     let g = gcd(a, b);
     let normal_vec = (-b / g, a / g);
-    
+
     let mut a_neg = a;
     let mut b_neg = b;
     let mut a_pos = a;
@@ -46,9 +49,8 @@ fn integer_solutions(a: i64, b: i64, max_size: i64) -> i64 {
 
 fn gcd(a: i64, b: i64) -> i64 {
     if a == 0 {
-        return b
-    }
-    else {
-        return gcd(b % a, a)
+        return b;
+    } else {
+        return gcd(b % a, a);
     }
 }

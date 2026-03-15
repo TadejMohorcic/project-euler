@@ -20,7 +20,7 @@ pub fn solver() {
 }
 
 fn count_rectangles(x: u64, y: u64) -> u64 {
-    let rectangles: u64 = ((x+1) * x * (y + 1) * y) / 4;
+    let rectangles: u64 = ((x + 1) * x * (y + 1) * y) / 4;
 
     rectangles
 }

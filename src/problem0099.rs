@@ -14,8 +14,18 @@ pub fn solver() -> io::Result<()> {
     for line in reader.lines() {
         let ok_line = line?;
         let mut line_vec = ok_line.split(',');
-        let base: f64 = line_vec.next().expect("missing base").trim().parse().expect("invalid base");
-        let exponent: f64 = line_vec.next().expect("missing exponent").trim().parse().expect("invalid exponent");
+        let base: f64 = line_vec
+            .next()
+            .expect("missing base")
+            .trim()
+            .parse()
+            .expect("invalid base");
+        let exponent: f64 = line_vec
+            .next()
+            .expect("missing exponent")
+            .trim()
+            .parse()
+            .expect("invalid exponent");
 
         let value = exponent * base.ln();
 

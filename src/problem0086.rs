@@ -3,13 +3,12 @@ pub fn solver() {
     let mut result = 0;
 
     for i in 1..=m {
-        for j in 2..=2*i {
+        for j in 2..=2 * i {
             if shortest_int(i, j) {
                 if j > i + 1 {
                     let combinations = ((2 * i - j + 2) as f64 / 2.0).floor();
                     result += combinations as u64;
-                }
-                else {
+                } else {
                     let combinations = (j as f64 / 2.0).floor();
                     result += combinations as u64;
                 }
@@ -17,7 +16,7 @@ pub fn solver() {
         }
         if result as f64 > 1e6 {
             println!("Problem 0086 - Cuboid Route: {}", i);
-            break
+            break;
         }
     }
 }

@@ -22,7 +22,7 @@ fn community_chest(cards: &Vec<&str>, index: usize, position: usize) -> usize {
     match cards[index] {
         "GO" => return 0,
         "JAIL" => return 10,
-        _ => return position
+        _ => return position,
     }
 }
 
@@ -34,29 +34,26 @@ fn chance_chest(cards: &Vec<&str>, index: usize, position: usize) -> usize {
         "E3" => return 24,
         "H2" => return 39,
         "R1" => return 5,
-        "U" => {if 11 < position && position < 28 {
-                return 28
+        "U" => {
+            if 11 < position && position < 28 {
+                return 28;
+            } else {
+                return 12;
             }
-            else {
-                return 12
+        }
+        "R" => {
+            if 4 < position && position < 15 {
+                return 15;
+            } else if 14 < position && position < 25 {
+                return 25;
+            } else if 24 < position && position < 35 {
+                return 35;
+            } else {
+                return 5;
             }
-        },
-        "R" => {if 4 < position && position < 15 {
-                return 15
-            }
-            else if 14 < position && position < 25 {
-                return 25
-            }
-            else if 24 < position && position < 35 {
-                return 35
-            }
-            else {
-                return 5
-            }
-        },
+        }
         "REV3" => return ((position - 3) % 40 + 40) % 40,
-        _ => return position
-
+        _ => return position,
     }
 }
 
@@ -98,8 +95,7 @@ fn play_monopoly(dice_size: usize, max_steps: usize) -> Vec<usize> {
 
         if double {
             number_of_doubles += 1;
-        }
-        else {
+        } else {
             number_of_doubles = 0;
         }
 
@@ -116,11 +112,11 @@ fn play_monopoly(dice_size: usize, max_steps: usize) -> Vec<usize> {
                 2 | 17 | 33 => {
                     position = community_chest(&cc_cards, cc_index, position);
                     cc_index = (cc_index + 1) % 16;
-                },
+                }
                 7 | 22 | 36 => {
                     position = chance_chest(&chance_cards, chance_index, position);
                     chance_index = (chance_index + 1) % 16;
-                },
+                }
                 _ => {}
             }
 

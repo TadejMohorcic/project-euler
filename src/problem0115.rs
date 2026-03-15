@@ -11,13 +11,16 @@ fn combinations(m: usize, max_size: u64) -> usize {
 
     loop {
         if j < m {
-            let new_combination = combinations[i-1] + (j as u64) + 1;
+            let new_combination = combinations[i - 1] + (j as u64) + 1;
             combinations.push(new_combination);
             j += 1;
-        }
-        else {
+        } else {
             let index_to = i - m;
-            let new_combination = combinations[i-1] + combinations[m-1..index_to].iter().fold(0, |acc, x| acc + x) + (m as u64);
+            let new_combination = combinations[i - 1]
+                + combinations[m - 1..index_to]
+                    .iter()
+                    .fold(0, |acc, x| acc + x)
+                + (m as u64);
             combinations.push(new_combination);
         }
 

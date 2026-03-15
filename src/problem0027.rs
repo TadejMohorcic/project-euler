@@ -27,8 +27,7 @@ pub fn solver() {
 fn is_prime(n: i64) -> bool {
     if n <= 0 {
         return false;
-    }
-    else {
+    } else {
         let root: i64 = (n as f64).sqrt() as i64;
         for i in 2..=root {
             if n % i == 0 {

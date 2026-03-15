@@ -15,7 +15,6 @@ pub fn solver() {
         }
 
         lookup_table.insert(i, div_sum);
-
     }
 
     println!("Problem 0021 - Amicable Numbers: {}", result);

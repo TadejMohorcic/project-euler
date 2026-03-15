@@ -14,10 +14,12 @@ mod problem0033;
 mod problem0036;
 mod problem0048;
 mod problem0054;
+mod problem0068;
 mod problem0084;
 mod problem0085;
 mod problem0086;
 mod problem0091;
+mod problem0094;
 mod problem0099;
 mod problem0114;
 mod problem0115;
@@ -28,10 +30,12 @@ mod problem0121;
 mod problem0173;
 mod problem0191;
 mod problem0205;
+mod problem0381;
 mod problem0788;
 mod problem0938;
 
 fn main() {
+    // problem0381::solver();
     problem0011::solver();
     problem0012::solver();
     problem0015::solver();
@@ -46,10 +50,12 @@ fn main() {
     problem0036::solver();
     problem0048::solver();
     problem0054::solver();
+    problem0068::solver();
     problem0084::solver();
     problem0085::solver();
     problem0086::solver();
     problem0091::solver();
+    problem0094::solver();
     problem0099::solver();
     problem0114::solver();
     problem0115::solver();
@@ -60,6 +66,6 @@ fn main() {
     problem0173::solver();
     problem0191::solver();
     problem0205::solver();
-    // problem0788::solver();
-    // problem0938::solver();
+    problem0788::solver();
+    problem0938::solver();
 }
